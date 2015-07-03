@@ -1,0 +1,28 @@
+{
+  "name": "rhymes",
+  "version": "1.0.0",
+  "description": "Give me an English word and I'll give you a list of rhymes",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --format && mocha"
+  },
+  "repository": "github:zeke/rhymes",
+  "keywords": [
+    "cmu",
+    "rhyme",
+    "words",
+    "language"
+  ],
+  "author": "zeke",
+  "license": "ISC",
+  "dependencies": {
+    "cmu-pronouncing-dictionary": "^1.0.1",
+    "code": "^1.4.1",
+    "lodash": "^3.9.3",
+    "object-values": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "standard": "^4.5.2"
+  }
+}
