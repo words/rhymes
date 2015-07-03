@@ -1,6 +1,6 @@
 {
   "name": "rhymes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Give me an English word and I'll give you a list of rhymes",
   "main": "index.js",
   "scripts": {
