@@ -20,9 +20,9 @@ npm test
 
 ## Dependencies
 
-- [cmu-pronouncing-dictionary](https://github.com/zeke/npm-pronouncing-dictionary): All the 134,000+ words in the CMU pronouncing dictionary as a simple JSON object
+- [cmu-pronouncing-dictionary](https://github.com/words/cmu-pronouncing-dictionary): All the 134,000+ words in the CMU pronouncing dictionary as a simple JSON object
 - [code](https://github.com/hapijs/code): assertion library
-- [lodash](): The modern build of lodash modular utilities.
+- [lodash](https://github.com/lodash/lodash): The modern build of lodash modular utilities.
 - [object-values](https://github.com/sindresorhus/object-values): Get the values of an object
 
 ## Dev Dependencies
