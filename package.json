@@ -20,7 +20,7 @@
   "dependencies": {
     "cmu-pronouncing-dictionary": "^1.0.1",
     "code": "^1.4.1",
-    "lodash": "^3.9.3",
+    "lodash": "^4.17.11",
     "object-values": "^1.0.0"
   },
   "devDependencies": {
