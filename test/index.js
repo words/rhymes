@@ -45,7 +45,6 @@ describe('rhymes', function () {
   it('finds matches regardless of input case', function () {
     expect(rhymes('CAT')).to.be.an.array()
     expect(rhymes('CAT')).to.not.be.empty()
-    expect(rhymes('CAT')).to.deep.equal(rhymes('cat'))
+    expect(rhymes('CAT')).to.equal(rhymes('cat'))
   })
-
 })

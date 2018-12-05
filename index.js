@@ -23,7 +23,7 @@ module.exports = function rhymes (input) {
   words.forEach(function (word) {
     var score = countMatchingTrailingSyllablesInPronunciations(inputPron, word.pron)
     if (score > 1) {
-      results.push(merge(word, {score: score}))
+      results.push(merge(word, { score: score }))
     }
   })
 
