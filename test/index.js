@@ -33,7 +33,7 @@ describe('rhymes', function () {
   })
 
   it('returns an empty array if word is not in corpus', function () {
-    expect(rhymes.words['sdfokusdls']).to.be.undefined()
+    expect(rhymes.words.sdfokusdls).to.be.undefined()
     expect(rhymes('sdfokusdls')).to.be.an.array()
   })
 
