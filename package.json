@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "cmu-pronouncing-dictionary": "^1.0.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "code": "^5.0.0",
