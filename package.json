@@ -19,13 +19,13 @@
   "license": "ISC",
   "dependencies": {
     "cmu-pronouncing-dictionary": "^1.0.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "code": "^5.0.0",
-    "mocha": "^2.2.5",
+    "mocha": "^6.2.1",
     "semantic-release": "^15.12.4",
-    "standard": "^4.5.2",
+    "standard": "^14.3.1",
     "travis-deploy-once": "^5.0.9"
   }
 }
