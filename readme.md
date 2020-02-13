@@ -26,12 +26,17 @@ Yields:
 
 ```js
 [
-  {score: 3, word: 'scat', pron: 'S K AE1 T'},
-  {score: 2, word: 'arnatt', pron: 'AA0 R N AE1 T'},
-  {score: 2, word: 'at', pron: 'AE1 T'},
-  {score: 2, word: 'at-bat', pron: 'AE1 T B AE1 T'},
-  {score: 2, word: 'balyeat', pron: 'B AE2 L IY0 AE1 T'},
-  // …and more results.
+  {score: 3, pron: 'S K AE1 T', word: 'scat'},
+  {score: 2, pron: 'AA0 R N AE1 T', word: 'arnatt'},
+  {score: 2, pron: 'AE1 T', word: 'at'},
+  {score: 2, pron: 'AE1 T B AE1 T', word: 'at-bat'},
+  {score: 2, pron: 'B AE2 L IY0 AE1 T', word: 'balyeat'},
+  {score: 2, pron: 'B AE1 T', word: 'bat'},
+  {score: 2, pron: 'B AE1 T', word: 'batt'},
+  {score: 2, pron: 'B AE1 T', word: 'batte'},
+  {score: 2, pron: 'B IH0 G AE1 T', word: 'begat'},
+  {score: 2, pron: 'B AE1 T', word: 'bhatt'},
+  // …and 10 more results.
 ]
 ```
 

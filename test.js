@@ -28,9 +28,9 @@ test('rhymes', function(t) {
       'denki',
       'dinky',
       'donkey',
-      'donkey(1)',
+      'donkey', // Different pronunciation
       'francie',
-      'franke(1)',
+      'franke',
       'frankie',
       'hankey',
       'hanky',

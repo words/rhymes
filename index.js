@@ -27,11 +27,15 @@ function rhymes(value) {
 
   return results.sort(sort).slice(0, 20)
 
-  function check(word) {
-    var score = countMatchingTrailingSyllables(pron, word.pron)
+  function check(other) {
+    var score = countMatchingTrailingSyllables(pron, other.pron)
 
-    if (score > 1 && value !== word.word) {
-      results.push(Object.assign({score: score}, word))
+    if (score > 1) {
+      results.push({
+        score: score,
+        pron: other.pron,
+        word: cleanAlternative(other.word)
+      })
     }
   }
 }
@@ -53,6 +57,11 @@ function countMatchingTrailingSyllables(a, b) {
 
   // Do not return words with exactly the same pronunciation (`kat` for `cat`)
   return 0
+}
+
+function cleanAlternative(word) {
+  var pos = word.indexOf('(')
+  return pos === -1 ? word : word.slice(0, pos)
 }
 
 function reverseSyllables(d) {
