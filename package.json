@@ -25,6 +25,7 @@
     "cmu-pronouncing-dictionary": "^2.0.0"
   },
   "devDependencies": {
+    "nyc": "^15.0.0",
     "prettier": "^1.0.0",
     "remark-cli": "^7.0.0",
     "remark-preset-wooorm": "^6.0.0",
@@ -34,7 +35,14 @@
   "scripts": {
     "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
     "test-api": "node test",
-    "test": "npm run format && npm run test-api"
+    "test-coverage": "nyc --reporter lcov tape test.js",
+    "test": "npm run format && npm run test-coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
   },
   "prettier": {
     "tabWidth": 2,

@@ -3,3 +3,4 @@ sudo: false
 node_js:
   - lts/dubnium
   - node
+after_script: bash <(curl -s https://codecov.io/bash)

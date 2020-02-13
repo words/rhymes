@@ -1,6 +1,7 @@
 # rhymes
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -55,6 +56,10 @@ Pass in an English word, and I’ll give you up to 20 words it rhymes with.
 [build-badge]: https://img.shields.io/travis/words/rhymes.svg
 
 [build]: https://travis-ci.org/words/rhymes
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/words/rhymes.svg
+
+[coverage]: https://codecov.io/github/words/rhymes
 
 [downloads-badge]: https://img.shields.io/npm/dm/rhymes.svg
 
