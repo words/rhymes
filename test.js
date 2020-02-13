@@ -15,6 +15,7 @@ test('rhymes', function(t) {
   t.deepEqual(
     words,
     [
+      'surveymonkey',
       'chunky',
       'clunky',
       'funky',
@@ -33,8 +34,7 @@ test('rhymes', function(t) {
       'franke',
       'frankie',
       'hankey',
-      'hanky',
-      'helsinki'
+      'hanky'
     ],
     'monkey: should result in rhymes!'
   )

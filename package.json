@@ -22,7 +22,7 @@
     "index.js"
   ],
   "dependencies": {
-    "cmu-pronouncing-dictionary": "^1.0.1"
+    "cmu-pronouncing-dictionary": "^2.0.0"
   },
   "devDependencies": {
     "prettier": "^1.0.0",
