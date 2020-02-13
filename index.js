@@ -39,19 +39,20 @@ function rhymes(value) {
 function countMatchingTrailingSyllables(a, b) {
   var left = reverseSyllables(a)
   var right = reverseSyllables(b)
-  var length = Math.min(left.length, right.length)
+  var length = Math.max(left.length, right.length)
   var index = -1
   var score = 0
 
   while (++index < length) {
     if (left[index] !== right[index]) {
-      break
+      return score
     }
 
     score++
   }
 
-  return score
+  // Do not return words with exactly the same pronunciation (`kat` for `cat`)
+  return 0
 }
 
 function reverseSyllables(d) {

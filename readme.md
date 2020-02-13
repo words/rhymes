@@ -26,11 +26,11 @@ Yields:
 
 ```js
 [
-  {score: 3, word: 'catt', pron: 'K AE1 T'},
-  {score: 3, word: 'kat', pron: 'K AE1 T'},
-  {score: 3, word: 'katt', pron: 'K AE1 T'},
   {score: 3, word: 'scat', pron: 'S K AE1 T'},
-  {score: 2, word: 'arnatt', pron: 'AA0 R N AE1 T'}
+  {score: 2, word: 'arnatt', pron: 'AA0 R N AE1 T'},
+  {score: 2, word: 'at', pron: 'AE1 T'},
+  {score: 2, word: 'at-bat', pron: 'AE1 T B AE1 T'},
+  {score: 2, word: 'balyeat', pron: 'B AE2 L IY0 AE1 T'},
   // …and more results.
 ]
 ```
