@@ -1,54 +1,67 @@
-const dict = require('cmu-pronouncing-dictionary')
-const merge = require('lodash').merge
-const sortBy = require('lodash').sortBy
+var dict = require('cmu-pronouncing-dictionary')
+
+var own = {}.hasOwnProperty
 
 var words = []
-Object.keys(dict).forEach(function (word) {
-  words.push({
-    word: word,
-    pron: dict[word]
-  })
+
+Object.keys(dict).forEach(function(word) {
+  words.push({word: word, pron: dict[word]})
 })
 
-module.exports = function rhymes (input) {
-  if (!input) return []
+module.exports = rhymes
+rhymes.words = words
 
-  input = input.toLowerCase()
-
-  if (!dict[input]) return []
-
-  var inputPron = dict[input]
+function rhymes(value) {
   var results = []
+  var pron
 
-  words.forEach(function (word) {
-    var score = countMatchingTrailingSyllablesInPronunciations(inputPron, word.pron)
-    if (score > 1) {
-      results.push(merge(word, { score: score }))
+  if (!value) return results
+
+  value = String(value).toLowerCase()
+
+  if (!own.call(dict, value)) return results
+
+  pron = dict[value]
+
+  words.forEach(check)
+
+  return results.sort(sort).slice(0, 20)
+
+  function check(word) {
+    var score = countMatchingTrailingSyllables(pron, word.pron)
+
+    if (score > 1 && value !== word.word) {
+      results.push(Object.assign({score: score}, word))
     }
-  })
-
-  results = sortBy(results, 'score')
-    .reverse()
-    .slice(0, 20)
-
-  return results
+  }
 }
 
-module.exports.words = words
-
-function countMatchingTrailingSyllablesInPronunciations (a, b) {
-  a = a.split(' ').reverse()
-  b = b.split(' ').reverse()
+function countMatchingTrailingSyllables(a, b) {
+  var left = reverseSyllables(a)
+  var right = reverseSyllables(b)
+  var length = Math.min(left.length, right.length)
+  var index = -1
   var score = 0
-  var shorterPron = (a.length < b.length) ? a : b
 
-  for (var i in shorterPron) {
-    if (a[i] === b[i]) {
-      score++
-    } else {
-      return score
+  while (++index < length) {
+    if (left[index] !== right[index]) {
+      break
     }
+
+    score++
   }
 
   return score
+}
+
+function reverseSyllables(d) {
+  return d.split(' ').reverse()
+}
+
+function sort(a, b) {
+  return pick(b) - pick(a)
+}
+
+function pick(d) {
+  return d.score
 }

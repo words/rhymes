@@ -1,31 +1,56 @@
 {
   "name": "rhymes",
-  "version": "0.0.0-development",
+  "version": "1.0.3",
   "description": "Give me an English word and I'll give you a list of rhymes",
-  "main": "index.js",
-  "scripts": {
-    "test": "standard --fix && mocha",
-    "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
-  },
-  "repository": "https://github.com/words/rhymes",
+  "license": "ISC",
   "keywords": [
     "cmu",
     "rhyme",
+    "english",
     "words",
     "language"
   ],
-  "author": "zeke",
-  "license": "ISC",
+  "repository": "words/rhymes",
+  "bugs": "https://github.com/words/rhymes/issues",
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+  "contributors": [
+    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
-    "cmu-pronouncing-dictionary": "^1.0.1",
-    "lodash": "^4.17.15"
+    "cmu-pronouncing-dictionary": "^1.0.1"
   },
   "devDependencies": {
-    "code": "^5.0.0",
-    "mocha": "^6.2.1",
-    "semantic-release": "^15.12.4",
-    "standard": "^14.3.1",
-    "travis-deploy-once": "^5.0.9"
+    "prettier": "^1.0.0",
+    "remark-cli": "^7.0.0",
+    "remark-preset-wooorm": "^6.0.0",
+    "tape": "^4.0.0",
+    "xo": "^0.26.0"
+  },
+  "scripts": {
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
+    "test-api": "node test",
+    "test": "npm run format && npm run test-api"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true,
+    "esnext": false
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
