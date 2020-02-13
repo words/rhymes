@@ -59,6 +59,7 @@ function countMatchingTrailingSyllables(a, b) {
   return 0
 }
 
+// `donkey(1)` -> `donkey`
 function cleanAlternative(word) {
   var pos = word.indexOf('(')
   return pos === -1 ? word : word.slice(0, pos)
@@ -69,7 +70,7 @@ function reverseSyllables(d) {
 }
 
 function sort(a, b) {
-  return pick(b) - pick(a)
+  return pick(b) - pick(a) || a.word.localeCompare(b.word)
 }
 
 function pick(d) {
